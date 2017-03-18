@@ -10,10 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var background: UIImageView!
+    @IBOutlet weak var titleImage: UIImageView!
+    @IBOutlet weak var welcomeBtn: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -21,5 +27,10 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func welcomePressed(_ sender: Any) {
+        titleImage.isHidden = false
+        background.isHidden = false
+        welcomeBtn.isHidden = true
+    }
 }
 
